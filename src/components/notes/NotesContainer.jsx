@@ -1,6 +1,6 @@
 import Notes from './Notes'
 import {connect} from 'react-redux'
-import {addNoteActionCreator, searchNoteActionCreator} from './../../redux/notesReducer'
+import {addNoteActionCreator, searchNoteActionCreator, sortNotesDateActionCreator, sortNotesTitleActionCreator} from './../../redux/notesReducer'
 
 
 
@@ -17,6 +17,12 @@ return {
     },
     searchNote: (noteTitle) => {
         dispatch(searchNoteActionCreator(noteTitle))
+    },
+    sortNotesTitle: () => {
+        dispatch(sortNotesTitleActionCreator())
+    },
+    sortNotesDate: () => {
+        dispatch(sortNotesDateActionCreator())
     }
 }
 }
